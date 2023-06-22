@@ -1,14 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { StyleSheet, Text, View, Button } from 'react-native'
+import NavigationStrings from '../../Const/NavigationStrings/NavigationStrings'
 
-const Home = () => {
+const Home = ({ navigation }) => {
     return (
-        <View>
-            <Text>Home</Text>
+        <View style={STYLES.mainCont} >
+            <Text>Home Screen</Text>
+            <Button title='Goto Settings' onPress={() => navigation.navigate(NavigationStrings.SETTINGS)} />
         </View>
     )
 }
 
 export default Home
 
-const styles = StyleSheet.create({})
+const STYLES = StyleSheet.create({
+    mainCont: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        // flexDirection: 'row',
+    },
+})
