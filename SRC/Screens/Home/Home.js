@@ -14,11 +14,19 @@ const Home = ({ navigation, size }) => {
     )
 }
 
+
 const mapStateToProps = (state) => {
     return {
-        size: state.FontSizeReducer.FontSize
+        size: state.FontSizeReducerWithSauce.FontSize
     }
 }
+
+
+// const mapStateToProps = (state) => {
+//     return {
+//         size: state.FontSizeReducer.FontSize
+//     }
+// }
 
 const mapDispatchToProps = (dispatch) => {
     return {
